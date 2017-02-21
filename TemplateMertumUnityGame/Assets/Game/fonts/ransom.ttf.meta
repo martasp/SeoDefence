@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: fa221ad4ab068834fa4698c79b71383f
+timeCreated: 1484220202
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Ransom
+  fontNames:
+  - Ransom
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

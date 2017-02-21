@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 95a559c66a83cd946acd90c666fc45ab
+timeCreated: 1484220202
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Team Spirit NF
+  fontNames:
+  - Team Spirit NF
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
