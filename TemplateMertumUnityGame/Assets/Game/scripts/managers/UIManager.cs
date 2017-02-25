@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
     private Fader transition;
-
     void Start()
     {
         transition = GameObject.Find("imgFader").GetComponent<Fader>();
