@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: da1fbe34c87623945ab51c5c0837c82b
+timeCreated: 1484220202
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Greenwich Mean
+  fontNames:
+  - Greenwich Mean
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -14,23 +14,27 @@ public class UIManager : MonoBehaviour {
     #region UIManaging
     public void PlayGameSceneAsync()
     {
+        Debug.Log("opening PlayGameScene" );
         Invoke("PlayGameScene", transition.fadeTime);
-        transition.TransparentToBlak();
+        transition.TransparentToBlack();
     }
     public void GameOverSceneAsync()
     {
+        Debug.Log("opening GameOverScene");
         Invoke("GameOverScene", transition.fadeTime);
-        transition.TransparentToBlak();
+        transition.TransparentToBlack();
     }
     public void ShopSceneAsync()
     {
-        transition.TransparentToBlak();
+        Debug.Log("opening ShopScene");
+        transition.TransparentToBlack();
         Invoke("ShopScene", transition.fadeTime);
     }
     public void StartSceneAsync()
     {
+        Debug.Log("opening StartScene");
         Invoke("StartScene", transition.fadeTime);
-        transition.TransparentToBlak();
+        transition.TransparentToBlack();
     }
     public void PlayGameScene()
     {
