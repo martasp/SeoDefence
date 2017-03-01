@@ -10,19 +10,15 @@ public class Fader : MonoBehaviour
     void Start()
     {
         myPanel = GetComponent<Image>();
-        Debug.Log("Pasiruoses fadinti"+ myPanel.name);
+        Debug.Log("Pasiruoses fadinti "+ myPanel.name);
         Invoke("BlackToTransparent",1);
-        //PlayerPrefs.SetInt("score", 25);
-        //BlackToTransparent();
     }
     public void BlackToTransparent()
     {
-        //myPanel.color = new Color(0,0,0,1);
         myPanel.CrossFadeAlpha(0f,fadeTime,true);
     }
     public void TransparentToBlack()
     {
-       // myPanel.color = new Color(0, 0, 0, 0);
         myPanel.CrossFadeAlpha(1f, fadeTime, true);
     }
 
