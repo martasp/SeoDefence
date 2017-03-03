@@ -31,8 +31,13 @@ public class HealthBar : MonoBehaviour
             Debug.Log("YOU ARE DEAD! Reviving...");
             currentHP = maxHP;
             slider.value = maxHP;
+            this.GameOver();
         }
         else Debug.Log("STILL OK");
-
+    }
+    public void GameOver()
+    {
+        var manager = this.gameObject.AddComponent<UIManager>();
+        manager.GameOverSceneAsync();
     }
 }

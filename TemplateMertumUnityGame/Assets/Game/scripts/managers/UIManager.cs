@@ -8,30 +8,35 @@ public class UIManager : MonoBehaviour {
     private Fader transition;
     void Start()
     {
+        Debug.Log("uzkrauti screen fader");
         transition = GameObject.Find("imgFader").GetComponent<Fader>();
     }
 
     #region UIManaging
     public void PlayGameSceneAsync()
     {
+        transition = GameObject.Find("imgFader").GetComponent<Fader>();
         Debug.Log("opening PlayGameScene" );
         Invoke("PlayGameScene", transition.fadeTime);
         transition.TransparentToBlack();
     }
     public void GameOverSceneAsync()
     {
+        transition = GameObject.Find("imgFader").GetComponent<Fader>();
         Debug.Log("opening GameOverScene");
-        Invoke("GameOverScene", transition.fadeTime);
+        Invoke("GameOverScene", 1);
         transition.TransparentToBlack();
     }
     public void ShopSceneAsync()
     {
+        transition = GameObject.Find("imgFader").GetComponent<Fader>();
         Debug.Log("opening ShopScene");
         transition.TransparentToBlack();
         Invoke("ShopScene", transition.fadeTime);
     }
     public void StartSceneAsync()
     {
+        transition = GameObject.Find("imgFader").GetComponent<Fader>();
         Debug.Log("opening StartScene");
         Invoke("StartScene", transition.fadeTime);
         transition.TransparentToBlack();
