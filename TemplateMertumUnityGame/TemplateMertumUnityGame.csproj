@@ -75,15 +75,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Game\scripts\Game\Enemy.cs" />
     <Compile Include="Assets\Game\Prefabs\SpawnPoint.cs" />
-    <Compile Include="Assets\Game\scenes\levels\Filler.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Exit.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\HealthBar.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\Path.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Pause.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\SpriteSwap.cs" />
     <Compile Include="Assets\Game\scripts\managers\ScoreManager.cs" />
     <Compile Include="Assets\Game\scripts\managers\UIManager.cs" />
     <Compile Include="Assets\Game\scripts\services\FadeText.cs" />
     <Compile Include="Assets\Game\scripts\services\Fader.cs" />
+    <Compile Include="Assets\Spot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game\fonts\1001fonts-decoborders-eula.txt" />
