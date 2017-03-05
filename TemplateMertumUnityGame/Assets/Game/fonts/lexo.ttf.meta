@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f6cdf0bd345654042b4d8d59a96cc6ec
+timeCreated: 1484220202
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Lexographer
+  fontNames:
+  - Lexographer
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
