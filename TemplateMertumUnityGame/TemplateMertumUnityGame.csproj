@@ -85,6 +85,7 @@
     <Compile Include="Assets\Game\scripts\managers\UIManager.cs" />
     <Compile Include="Assets\Game\scripts\services\FadeText.cs" />
     <Compile Include="Assets\Game\scripts\services\Fader.cs" />
+    <Compile Include="Assets\Spot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game\fonts\1001fonts-decoborders-eula.txt" />
