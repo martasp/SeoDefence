@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour {
+public class Walk : MonoBehaviour {
 
     public bool IsMoving = false;
     public int  stopcount = 0;
