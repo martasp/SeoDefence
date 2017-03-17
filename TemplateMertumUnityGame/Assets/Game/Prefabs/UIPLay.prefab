@@ -258,6 +258,7 @@ GameObject:
   - component: {fileID: 222276377675145450}
   - component: {fileID: 114347956438121788}
   - component: {fileID: 114151452586617620}
+  - component: {fileID: 114148750641126412}
   m_Layer: 5
   m_Name: imgFader
   m_TagString: Untagged
@@ -365,6 +366,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
   m_IsActive: 1
+--- !u!114 &114148750641126412
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1712694913033756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be06231d47281d44a9ee1bc0449dfdae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHP: 10
+  CurrentHP: 10
 --- !u!114 &114151452586617620
 MonoBehaviour:
   m_ObjectHideFlags: 1

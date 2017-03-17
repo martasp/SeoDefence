@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 60192668930585872}
   - component: {fileID: 114810531494080646}
   m_Layer: 0
-  m_Name: enemy2
+  m_Name: lvl3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1855140093367550}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.74, y: -1.61, z: 0}
+  m_LocalPosition: {x: -2.6340108, y: -2.899104, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -101,7 +101,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsMoving: 0
   stopcount: 0
-  speed: 1
+  speed: 2
   rotSpeed: 8
 --- !u!114 &114810531494080646
 MonoBehaviour:
@@ -114,8 +114,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be06231d47281d44a9ee1bc0449dfdae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 10
-  CurrentHP: 10
+  maxHP: 30
+  CurrentHP: 30
 --- !u!212 &212757379094031746
 SpriteRenderer:
   m_ObjectHideFlags: 1
