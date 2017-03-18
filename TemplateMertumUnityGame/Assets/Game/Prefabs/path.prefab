@@ -55,9 +55,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   Points:
-  - {x: 6, y: 4}
-  - {x: -6, y: -4}
+  - {x: -8, y: -3}
+  - {x: -8, y: 5}
   - {x: 6, y: 2}
-  - {x: 3, y: 3}
-  - {x: 6, y: 6}
-  - {x: 0, y: 0}

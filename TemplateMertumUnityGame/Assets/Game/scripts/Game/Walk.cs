@@ -10,8 +10,11 @@ public class Walk : MonoBehaviour {
     public float rotSpeed = 10;
     private List<Vector2> path;
     private Vector2 there;
+    private HealthBar MyHp;
     // Use this for initialization
-    void Start () {
+    void Start ()
+    {
+        MyHp = GameObject.Find("Slider").GetComponent<HealthBar>();
         path = GameObject.Find("path").GetComponent<Path>().Points;
         Time.timeScale = 1;
     }
@@ -23,7 +26,17 @@ public class Walk : MonoBehaviour {
             moveTo();
             IsWaypointFinished();
         }
+        else
+        {
+           die();
+        }
 
+    }
+
+    public void die()
+    {
+        MyHp.Damage();
+        Destroy(this.gameObject);
     }
     public void moveTo()
     {
