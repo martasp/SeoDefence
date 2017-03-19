@@ -17,7 +17,7 @@ public class SpawnPoint : MonoBehaviour {
         Debug.Log(transform.position.x);
         for (int i = 0; i < enemiesCount; i++)
         {
-            Instantiate(enemyType, new Vector3(transform.position.x - i, transform.position.y), Quaternion.identity).SetActive(true);
+            Instantiate(enemyType, new Vector3(transform.position.x, transform.position.y), Quaternion.identity).SetActive(true);
             yield return new WaitForSeconds(spawnInterval);
         }
     }
