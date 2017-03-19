@@ -75,10 +75,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Game\scripts\Game\Enemy.cs" />
+    <Compile Include="Assets\Game\scripts\Game\Drag.cs" />
     <Compile Include="Assets\Game\scripts\Game\SpawnPoint.cs" />
+    <Compile Include="Assets\Game\scripts\Game\Walk.cs" />
+    <Compile Include="Assets\Game\scripts\Game\hp.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Exit.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\HealthBar.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\MoneyScript.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Path.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Pause.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\SpriteSwap.cs" />

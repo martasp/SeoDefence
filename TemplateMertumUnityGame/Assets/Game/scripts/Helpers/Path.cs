@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Path : MonoBehaviour {
     
-    public List<Enemy> Enemies = new List<Enemy>();
+    public List<Walk> Enemies = new List<Walk>();
     public List<Vector2> Points = new List<Vector2>();
     void Start () {
        // move();

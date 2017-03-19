@@ -36,7 +36,15 @@ public class ScoreManager : MonoBehaviour {
 	public void Displayscore()
 	{
 		scoreText.text = scoreGet ();
-	}
+
+    }
+
+    public void AddScore(int sc)
+    {
+        var temp = PlayerPrefs.GetInt("score") + sc;
+        PlayerPrefs.SetInt("score",temp);
+        Displayscore();
+    }
 
 	void Start()
 	{
@@ -46,7 +54,7 @@ public class ScoreManager : MonoBehaviour {
 	void Update()
 	{
 	//	Displayscore ();
-	//	DisplayHscore ();
+	//DisplayHscore ();
 	}
 
 
