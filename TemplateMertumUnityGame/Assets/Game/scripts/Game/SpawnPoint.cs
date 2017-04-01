@@ -16,7 +16,6 @@ public class SpawnPoint : MonoBehaviour {
 
     IEnumerator Spawn()
     {
-        Debug.Log(transform.position.x);
         for (int i = 0; i < enemiesCount; i++)
         {
             GameObject spawnling = Instantiate(enemyType, new Vector3(transform.position.x, transform.position.y), Quaternion.identity);

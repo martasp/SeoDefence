@@ -84,6 +84,7 @@
     <Compile Include="Assets\Game\scripts\Helpers\MoneyScript.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Path.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Pause.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\Projectile.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\SpriteSwap.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Targeting.cs" />
     <Compile Include="Assets\Game\scripts\Tower.cs" />

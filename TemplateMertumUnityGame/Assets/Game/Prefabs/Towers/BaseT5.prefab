@@ -159,7 +159,14 @@ MonoBehaviour:
   rotSpeed: 2
   vec: {x: -3, y: 0}
   IsRotating: 1
+  isProjectileBased: 0
+  numberOfWeapons: 2
+  fireRate: 2
+  target: {fileID: 0}
   targetSys: {fileID: 0}
+  projectiles: []
+  rocketType: {fileID: 0}
+  spawnPosition: {fileID: 0}
 --- !u!212 &212293492914485758
 SpriteRenderer:
   m_ObjectHideFlags: 1

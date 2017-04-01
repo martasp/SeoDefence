@@ -12,12 +12,23 @@ public class Tower : MonoBehaviour {
     public int rotSpeed;
     public Vector2 vec;
     public bool IsRotating = false;
+    public bool isProjectileBased = false;
+    public int numberOfWeapons = 1;
+    public int fireRate = 2;
 
-    private Transform target;
+    private Vector2 noTarget = new Vector2(0, 0);
+    public GameObject target;
     public Targeting targetSys;
+    public List<Projectile> projectiles;
+    public GameObject rocketType;
+    public Transform spawnPosition;
     void Start()
     {
+        spawnPosition = GetComponentInParent<Transform>();
+        spawnPosition.Rotate(transform.rotation.eulerAngles);
         targetSys = GetComponent<Targeting>();
+        GetComponentsInChildren(true, projectiles);
+        StartCoroutine(SpawnFire());
         //this.transform.localEulerAngles.z += 90;
         //target = GetComponent<TargetSystem>()
     }
@@ -39,12 +50,37 @@ public class Tower : MonoBehaviour {
         //    IsRotating = false;
         //}
     }
-	
-	// Update is called once per frame
-	void Update ()
+
+    IEnumerator SpawnFire()
+    {
+        while (isProjectileBased)
+        {
+            if (projectiles.Count < numberOfWeapons)
+            {
+                GameObject rocket = Instantiate(rocketType, spawnPosition.position + rocketType.transform.position, transform.rotation * rocketType.transform.rotation);
+                rocket.transform.parent = transform;
+                projectiles.Add(rocket.GetComponent<Projectile>());
+                yield return new WaitForSeconds(fireRate);
+            }
+            else
+            {
+                projectiles[0].fired = true;
+                projectiles.RemoveAt(0);
+                yield return new WaitForSeconds(fireRate);
+            }
+                
+        }
+    }
+
+    // Update is called once per frame
+    void Update ()
 	{
-        vec = targetSys.GetTarget();
-	    rotateGunAsinc(vec);
+        target = targetSys.GetTarget();
+        if (target != null)
+            vec = target.transform.position;
+        else vec = noTarget;
+
+        rotateGunAsinc(vec);
 	    //rotate(vec);
 	    //Instantiate<GameObject>(BulletORbomb);
 	    //  rotate(new Vector2(-5, 3));

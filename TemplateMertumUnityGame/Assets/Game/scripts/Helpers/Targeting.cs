@@ -5,9 +5,9 @@ using UnityEngine;
 // TODO Enemies should add and remove themselves from list
 
 public class Targeting : MonoBehaviour {
-    public List<Transform> targets = new List<Transform>();
+    public List<GameObject> targets = new List<GameObject>();
     private Transform myTransform;
-    public Transform selected = null;
+    public GameObject selected = null;
 
 	// Use this for initialization
 	void Start () {
@@ -18,21 +18,21 @@ public class Targeting : MonoBehaviour {
 
     void AddAllEnemies()
     {
-        targets = new List<Transform>();
+        targets = new List<GameObject>();
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
 
         foreach (var enemy in enemies)
         {
-            targets.Add(enemy.transform);
+            targets.Add(enemy);
         }
     }
 
-    public void AddEnemy (Transform toAdd)
+    public void AddEnemy (GameObject toAdd)
     {
         targets.Add(toAdd);
     }
 
-    public void RemoveEnemy (Transform toRemove)
+    public void RemoveEnemy (GameObject toRemove)
     {
         targets.Remove(toRemove);
     }
@@ -41,23 +41,23 @@ public class Targeting : MonoBehaviour {
     {
         AddAllEnemies();
         targets.Sort(
-            delegate(Transform t1, Transform t2)
+            delegate(GameObject t1, GameObject t2)
             {
-                return Vector3.Distance(t1.position, myTransform.position)
+                return Vector3.Distance(t1.transform.position, myTransform.position)
                 .CompareTo(
-                    Vector3.Distance(t2.position, myTransform.position));
+                    Vector3.Distance(t2.transform.position, myTransform.position));
             });
     }
 
-    public Vector3 GetTarget()
+    public GameObject GetTarget()
     {
         if (targets.Count != 0)
         {
             SortTargets();
             selected = targets[0];
-            return selected.position;
+            return selected;
         }
-        else return new Vector3(0, 0);
+        else return null;
         
     }
 	
