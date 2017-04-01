@@ -28,12 +28,8 @@ public class HealthBar : MonoBehaviour
         slider.value = currentHP;
         if (currentHP == 0)
         {
-            Debug.Log("YOU ARE DEAD! Reviving...");
-            currentHP = maxHP;
-            slider.value = maxHP;
             this.GameOver();
         }
-        else Debug.Log("STILL OK");
     }
     public void GameOver()
     {
