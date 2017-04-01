@@ -13,9 +13,11 @@ public class Tower : MonoBehaviour {
     public Vector2 vec;
     public bool IsRotating = false;
 
-    private GameObject target;
+    private Transform target;
+    public Targeting targetSys;
     void Start()
     {
+        targetSys = GetComponent<Targeting>();
         //this.transform.localEulerAngles.z += 90;
         //target = GetComponent<TargetSystem>()
     }
@@ -31,19 +33,17 @@ public class Tower : MonoBehaviour {
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
         var lerped = Mathf.LerpAngle(transform.rotation.eulerAngles.z, rotationZ, Time.deltaTime * rotSpeed);
         this.transform.eulerAngles = new Vector3(0, 0, lerped);
-        Debug.Log("moving gun to point");
         IsRotating = true;
         //if ( Mathf.abs(target.z - lerped)< 0.3f )
         //{
         //    IsRotating = false;
         //}
-        Debug.Log(lerped);
     }
 	
 	// Update is called once per frame
 	void Update ()
 	{
-
+        vec = targetSys.GetTarget();
 	    rotateGunAsinc(vec);
 	    //rotate(vec);
 	    //Instantiate<GameObject>(BulletORbomb);

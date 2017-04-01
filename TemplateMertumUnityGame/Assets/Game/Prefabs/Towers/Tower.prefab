@@ -54,7 +54,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rotSpeed: 2
   vec: {x: 1, y: 1}
-  IsRotating: 0
+  IsRotating: 1
+  targetSys: {fileID: 0}
 --- !u!212 &212591332431197690
 SpriteRenderer:
   m_ObjectHideFlags: 1
