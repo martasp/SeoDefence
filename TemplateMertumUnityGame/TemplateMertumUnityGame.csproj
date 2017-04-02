@@ -78,6 +78,7 @@
     <Compile Include="Assets\Game\scripts\Game\Drag.cs" />
     <Compile Include="Assets\Game\scripts\Game\SpawnPoint.cs" />
     <Compile Include="Assets\Game\scripts\Game\SplashDamage.cs" />
+    <Compile Include="Assets\Game\scripts\Game\Tower.cs" />
     <Compile Include="Assets\Game\scripts\Game\Walk.cs" />
     <Compile Include="Assets\Game\scripts\Game\hp.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Exit.cs" />
