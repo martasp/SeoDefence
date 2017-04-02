@@ -88,7 +88,6 @@
     <Compile Include="Assets\Game\scripts\Helpers\Projectile.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\SpriteSwap.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Targeting.cs" />
-    <Compile Include="Assets\Game\scripts\Tower.cs" />
     <Compile Include="Assets\Game\scripts\managers\ScoreManager.cs" />
     <Compile Include="Assets\Game\scripts\managers\UIManager.cs" />
     <Compile Include="Assets\Game\scripts\services\FadeText.cs" />
