@@ -49,15 +49,13 @@ public class Walk : MonoBehaviour {
         //rotation
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg ;
         var lerped = Mathf.LerpAngle(transform.rotation.eulerAngles.z, rotationZ, Time.deltaTime * rotSpeed);
-        this.transform.eulerAngles= new Vector3(0,0,lerped);
-        Debug.Log("moving to point");      
+        this.transform.eulerAngles= new Vector3(0,0,lerped);     
     }
     public bool IsWaypointFinished()
     {
         var there = path[stopcount];
         if (Vector2.Distance(this.transform.position,there) < 0.3f)
         {
-            Debug.Log("i em here in the point" + stopcount);
             stopcount++;
             //StopMoveing(); 
             return true;
