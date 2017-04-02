@@ -26,9 +26,19 @@ public class Projectile : MonoBehaviour {
             if (target != null)
             {
                 vec = target.transform.position;
+                transform.parent = null; //++ atskiria nuo teva kad nepaveldetu statisku kordinaciu kai tevas sukinejasi
+                rotateProjectile(vec);//++ pasuka tinkama linkme raketa
                 transform.position = Vector2.MoveTowards(transform.position, vec, missileVelocity * Time.deltaTime);
             }
             else vec = noTarget;
         }
+    }
+    private void rotateProjectile(Vector2 target)
+    {
+        //rotation
+        Vector2 difference = target - (Vector2)this.transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        var lerped = Mathf.LerpAngle(transform.rotation.eulerAngles.z, rotationZ, Time.deltaTime * rotSpeed);
+        this.transform.eulerAngles = new Vector3(0, 0, lerped);
     }
 }

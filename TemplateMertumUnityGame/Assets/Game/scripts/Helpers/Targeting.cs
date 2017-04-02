@@ -12,7 +12,6 @@ public class Targeting : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         myTransform = transform;
-
         AddAllEnemies();
 	}
 
