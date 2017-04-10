@@ -8,6 +8,7 @@ public class Targeting : MonoBehaviour {
     public List<GameObject> targets = new List<GameObject>();
     private Transform myTransform;
     public GameObject selected = null;
+    public string targetTag = "enemy";
 
 	// Use this for initialization
 	void Start () {
@@ -18,7 +19,7 @@ public class Targeting : MonoBehaviour {
     void AddAllEnemies()
     {
         targets = new List<GameObject>();
-        GameObject[] enemies = GameObject.FindGameObjectsWithTag("enemy");
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag(targetTag);
 
         foreach (var enemy in enemies)
         {
