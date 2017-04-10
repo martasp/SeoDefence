@@ -1,0 +1,14 @@
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\TemplateMertumUnityGameTests.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\TemplateMertumUnityGameTests.pdb
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\Assembly-CSharp.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEngine.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEngine.UI.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEditor.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\Assembly-CSharp.pdb
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEngine.xml
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEngine.UI.xml
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\bin\Debug\UnityEditor.xml
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\obj\Debug\TemplateMertumUnityGameTests.csprojResolveAssemblyReference.cache
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\obj\Debug\TemplateMertumUnityGameTests.dll
+C:\Users\mart\Desktop\3SprinSeoDef\SeoDefence\TemplateMertumUnityGameTests\obj\Debug\TemplateMertumUnityGameTests.pdb

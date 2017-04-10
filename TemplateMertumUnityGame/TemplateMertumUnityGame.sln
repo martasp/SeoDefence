@@ -1,7 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMertumUnityGame", "TemplateMertumUnityGame.csproj", "{6C199C05-F96D-09DF-E02E-249188F7FB0F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTesting", "UnitTesting", "{A02D7B60-F863-4103-B07D-405E36D23B6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMertumUnityGameTests", "..\TemplateMertumUnityGameTests\TemplateMertumUnityGameTests.csproj", "{8FE5727F-57FC-4D43-9488-389ABE5867DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +19,10 @@ Global
 		{6C199C05-F96D-09DF-E02E-249188F7FB0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C199C05-F96D-09DF-E02E-249188F7FB0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C199C05-F96D-09DF-E02E-249188F7FB0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FE5727F-57FC-4D43-9488-389ABE5867DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FE5727F-57FC-4D43-9488-389ABE5867DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FE5727F-57FC-4D43-9488-389ABE5867DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FE5727F-57FC-4D43-9488-389ABE5867DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
