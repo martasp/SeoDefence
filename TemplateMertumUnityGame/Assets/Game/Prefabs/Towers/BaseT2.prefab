@@ -20,8 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4775431394175866}
   - component: {fileID: 212648244280767016}
-  - component: {fileID: 114329081521372032}
   - component: {fileID: 114696040996032002}
+  - component: {fileID: 114569667165914006}
   m_Layer: 0
   m_Name: Tower (1)
   m_TagString: Untagged
@@ -132,7 +132,7 @@ Transform:
   m_Father: {fileID: 4775431394175866}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114329081521372032
+--- !u!114 &114569667165914006
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -140,11 +140,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1709036833711772}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3a58a9cc1187e4fbd1058e7b735450, type: 3}
+  m_Script: {fileID: 11500000, guid: a64e7b1b62a9476409dc2124fd5ebecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemies: []
-  Points: []
+  rotSpeed: 2
+  vec: {x: 0, y: 0}
+  IsRotating: 1
+  isProjectileBased: 0
+  numberOfWeapons: 1
+  fireRate: 2
+  target: {fileID: 0}
+  targetSys: {fileID: 0}
+  projectiles: []
+  rocketType: {fileID: 0}
+  spawnPosition: {fileID: 0}
 --- !u!114 &114696040996032002
 MonoBehaviour:
   m_ObjectHideFlags: 1

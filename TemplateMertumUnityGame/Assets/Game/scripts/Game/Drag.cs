@@ -24,4 +24,26 @@ public class Drag : MonoBehaviour
 
         tempreal.transform.position = new Vector3(worldPos.x, worldPos.y, temp);
     }
+    public void end()
+    {
+        Vector3 curPos = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -10);
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(curPos);
+        var spots = GameObject.FindGameObjectsWithTag("spot");
+        foreach (var spot in spots)
+        {
+            worldPos.Set(worldPos.x, worldPos.y, 0);
+            var isThere = spot.GetComponent<SpriteRenderer>().bounds.Contains(worldPos);
+            Debug.Log(spot.GetComponent<SpriteRenderer>().bounds);
+            Debug.Log(worldPos);
+            Debug.Log(isThere);
+            if (isThere)
+            {
+                spot.GetComponent<Spot>().SetTower(tempreal);
+            }
+            else
+            {
+                Destroy(tempreal);
+            }
+        }
+    }
 }
