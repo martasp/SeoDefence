@@ -39,11 +39,9 @@ public class Drag : MonoBehaviour
             if (isThere)
             {
                 spot.GetComponent<Spot>().SetTower(tempreal);
-            }
-            else
-            {
-                Destroy(tempreal);
+                return;
             }
         }
+        Destroy(tempreal);
     }
 }

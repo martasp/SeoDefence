@@ -19,7 +19,7 @@ namespace Assets.Game.scripts.Game
                 if (distanceToEnemy <= radius)
                 {
                     enemy.GetComponent<hp>().CurrentHP -= splashDamage;
-                    Debug.Log("padaryta zala, liko gyvybiu: " + enemy.GetComponent<hp>().CurrentHP + ", atstumas: " + distanceToEnemy);
+                   // Debug.Log("padaryta zala, liko gyvybiu: " + enemy.GetComponent<hp>().CurrentHP + ", atstumas: " + distanceToEnemy);
                 }
 
             }
