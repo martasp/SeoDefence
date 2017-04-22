@@ -83,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets: []
   selected: {fileID: 0}
+  targetTag: enemy
 --- !u!114 &114839332033961110
 MonoBehaviour:
   m_ObjectHideFlags: 1
