@@ -54,9 +54,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4528034508146228}
   - component: {fileID: 212137293575170616}
+  - component: {fileID: 114236049576677716}
+  - component: {fileID: 114207251058709480}
   m_Layer: 0
   m_Name: BaseT6
-  m_TagString: Untagged
+  m_TagString: tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +134,29 @@ Transform:
   m_Father: {fileID: 4506053707862310}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114207251058709480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751349283175992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dded0503d39b67469701fdaf00561c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &114236049576677716
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1751349283175992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba892ef888f1ee74286bacee6e83008f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 70
 --- !u!114 &114468753557098236
 MonoBehaviour:
   m_ObjectHideFlags: 1

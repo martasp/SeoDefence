@@ -31,15 +31,18 @@ public class Drag : MonoBehaviour
         var spots = GameObject.FindGameObjectsWithTag("spot");
         foreach (var spot in spots)
         {
-            worldPos.Set(worldPos.x, worldPos.y, 0);
-            var isThere = spot.GetComponent<SpriteRenderer>().bounds.Contains(worldPos);
-            Debug.Log(spot.GetComponent<SpriteRenderer>().bounds);
-            Debug.Log(worldPos);
-            Debug.Log(isThere);
-            if (isThere)
+            if (!spot.GetComponent<Spot>().IsOn)
             {
-                spot.GetComponent<Spot>().SetTower(tempreal);
-                return;
+                worldPos.Set(worldPos.x, worldPos.y, 0);
+                var isThere = spot.GetComponent<SpriteRenderer>().bounds.Contains(worldPos);
+                Debug.Log(spot.GetComponent<SpriteRenderer>().bounds);
+                Debug.Log(worldPos);
+                Debug.Log(isThere);
+                if (isThere && tempreal!=null)
+                {
+                    spot.GetComponent<Spot>().SetTower(tempreal);
+                    return;
+                }
             }
         }
         Destroy(tempreal);

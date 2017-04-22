@@ -4,31 +4,46 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MoneyScript : MonoBehaviour {
-    public int money = 300;
+    public int money = 5;
 
 	// Use this for initialization
-	void Start () {
-		
+	void Start ()
+	{
+	    InitMoney();
 	}
-	
-	// Update is called once per frame
+
+    private void InitMoney()
+    {
+        money = PlayerPrefs.GetInt("money");
+        SetMoneyInView();
+    }
+
+    private void SetMoneyInView()
+    {
+        var text = this.GetComponent<Text>();
+        text.text = money.ToString();
+        PlayerPrefs.SetInt("Money", money);
+    }
+
+    // Update is called once per frame
 	void Update () {
 		
 	}
 
     public void Add(int amount)
     {
-        Text text = GetComponent<Text>();
         money += amount;
-        text.text = money.ToString();
+        SetMoneyInView();
     }
 
-    public void Sub(int amount)
+    public bool Sub(int amount)
     {
         if (amount > money)
-            return;
-        Text text = GetComponent<Text>();
+        {
+            return false;
+        }
         money -= amount;
-        text.text = money.ToString();
+        SetMoneyInView();
+        return true;
     }
 }

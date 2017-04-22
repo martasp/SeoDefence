@@ -32,7 +32,10 @@ public class hp : MonoBehaviour {
         if (img.color.a < 0.01f)
         {
             if (transform.childCount > 0)
+            {
                 Destroy(this.gameObject.transform.GetChild(0).gameObject);
+            }
+            GameObject.Find("Money").GetComponent<MoneyScript>().Add(50); //gets money for one kills
             Destroy(this.gameObject);
         }
     }

@@ -84,6 +84,7 @@
     <Compile Include="Assets\Game\scripts\Helpers\DontDestroy.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Exit.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\HealthBar.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\Info.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\MoneyScript.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Path.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Pause.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Game\scripts\services\FadeText.cs" />
     <Compile Include="Assets\Game\scripts\services\Fader.cs" />
     <Compile Include="Assets\Game\scripts\turrentRotation.cs" />
+    <Compile Include="Assets\GetInfo.cs" />
     <Compile Include="Assets\Spot.cs" />
   </ItemGroup>
   <ItemGroup>

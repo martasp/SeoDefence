@@ -58,9 +58,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4613755315939758}
   - component: {fileID: 212670150458374802}
+  - component: {fileID: 114865009641174348}
+  - component: {fileID: 114218542059465180}
   m_Layer: 0
   m_Name: BaseT1
-  m_TagString: Untagged
+  m_TagString: tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -154,6 +156,17 @@ MonoBehaviour:
   projectiles: []
   rocketType: {fileID: 1755767337505702, guid: 9eff5d417991a2f4293a9b7e370bb8e0, type: 2}
   spawnPosition: {fileID: 0}
+--- !u!114 &114218542059465180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996025838307136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dded0503d39b67469701fdaf00561c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114310367625933040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,6 +196,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets: []
   selected: {fileID: 0}
+  targetTag: enemy
 --- !u!114 &114827864846871240
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -196,6 +210,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets: []
   selected: {fileID: 0}
+  targetTag: enemy
+--- !u!114 &114865009641174348
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1996025838307136}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba892ef888f1ee74286bacee6e83008f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 10
 --- !u!114 &114919247773011934
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -311,7 +338,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4f8d01e278a5bdd42b8f9896461f3a53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

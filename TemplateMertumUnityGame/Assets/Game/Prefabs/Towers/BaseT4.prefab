@@ -54,9 +54,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4438535082222212}
   - component: {fileID: 212093016974087148}
+  - component: {fileID: 114308983983026564}
+  - component: {fileID: 114651289463342306}
   m_Layer: 0
   m_Name: BaseT4
-  m_TagString: Untagged
+  m_TagString: tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -102,6 +104,18 @@ Transform:
   m_Father: {fileID: 4438535082222212}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &114308983983026564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895294484200166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba892ef888f1ee74286bacee6e83008f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 50
 --- !u!114 &114474518565028634
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -116,7 +130,25 @@ MonoBehaviour:
   rotSpeed: 2
   vec: {x: -3, y: 0}
   IsRotating: 1
+  isProjectileBased: 0
+  numberOfWeapons: 1
+  fireRate: 2
+  target: {fileID: 0}
   targetSys: {fileID: 0}
+  projectiles: []
+  rocketType: {fileID: 0}
+  spawnPosition: {fileID: 0}
+--- !u!114 &114651289463342306
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1895294484200166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dded0503d39b67469701fdaf00561c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114885843998696256
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -130,6 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targets: []
   selected: {fileID: 0}
+  targetTag: enemy
 --- !u!212 &212004988252587180
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -160,7 +193,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 30
+  m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 9e72cb3bd06e9314aac6712e71e02828, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
