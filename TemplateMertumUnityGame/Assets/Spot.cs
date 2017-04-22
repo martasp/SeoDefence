@@ -13,6 +13,8 @@ public class Spot : MonoBehaviour
             this.tower = towerIn;
             this.tower.transform.position = this.transform.position;
             IsOn = true;
+            towerIn.transform.Find("Tower (1)").GetComponent<Tower>().start = true;
+            towerIn.transform.Find("Tower (1)").GetComponent<Tower>().Start();
         }
         else
         {

@@ -20,13 +20,18 @@ public class Tower : MonoBehaviour {
     public List<Projectile> projectiles;
     public GameObject rocketType;
     public Transform spawnPosition;
-    void Start()
+    public bool start = false;
+    public void Start()
     {
-        spawnPosition = GetComponentInParent<Transform>();
-        spawnPosition.Rotate(transform.rotation.eulerAngles);
-        targetSys = GetComponent<Targeting>();
-        GetComponentsInChildren(true, projectiles);
-        StartCoroutine(SpawnFire());
+        if (start)
+        {
+            spawnPosition = GetComponentInParent<Transform>();
+            spawnPosition.Rotate(transform.rotation.eulerAngles);
+            targetSys = GetComponent<Targeting>();
+            GetComponentsInChildren(true, projectiles);
+            StartCoroutine(SpawnFire());
+        }
+
     }
 
     private void rotateGunAsinc(Vector2 target)
@@ -61,10 +66,13 @@ public class Tower : MonoBehaviour {
     }
     void Update ()
 	{
-        target = targetSys.GetTarget();
-        if (target != null)
-            vec = target.transform.position;
-        else vec = noTarget;
-        rotateGunAsinc(vec);
+	    if (start)
+	    {
+	        target = targetSys.GetTarget();
+	        if (target != null)
+	            vec = target.transform.position;
+	        else vec = noTarget;
+	        rotateGunAsinc(vec);
+	    }
 	}
 }
