@@ -5,7 +5,7 @@ using UnityEngine;
 public class Tower : MonoBehaviour {
 
     public int Range { get; set; }
-    public int Damage { get; set; }
+    public int Damage;
     public GameObject BulletORbomb { get; set; }
     public int rotSpeed;
     public Vector2 vec;
@@ -18,6 +18,7 @@ public class Tower : MonoBehaviour {
     public GameObject target;
     public Targeting targetSys;
     public List<Projectile> projectiles;
+    public List<Bullet> bullets;
     public GameObject rocketType;
     public Transform spawnPosition;
     public bool start = false;
@@ -29,6 +30,7 @@ public class Tower : MonoBehaviour {
             spawnPosition.Rotate(transform.rotation.eulerAngles);
             targetSys = GetComponent<Targeting>();
             GetComponentsInChildren(true, projectiles);
+            GetComponentsInChildren(true, bullets);
             StartCoroutine(SpawnFire());
         }
 
@@ -63,7 +65,73 @@ public class Tower : MonoBehaviour {
             }
                 
         }
+        while (!isProjectileBased)
+        {
+            if (target != null)
+            { 
+                if (bullets.Count == 2)
+                {
+                    if (!bullets[0].fired)
+                    {
+                        if (!bullets[0].gameObject.activeSelf)
+                        {
+                            bullets[0].see();
+                            target.GetComponent<hp>().CurrentHP -= Damage;
+                            yield return new WaitForSeconds(0.1F);
+                        }
+                        else
+                        {
+                            bullets[0].hide();
+                            bullets[0].fired = true;
+                            bullets[1].fired = false;
+                            yield return new WaitForSeconds(fireRate);
+                        }
+                        
+                    }
+                    else
+                    {
+                        if (!bullets[1].gameObject.activeSelf)
+                        {
+                            bullets[1].see();
+                            target.GetComponent<hp>().CurrentHP -= Damage;
+                            yield return new WaitForSeconds(0.1F);
+                        }
+                        else
+                        {
+                            bullets[1].hide();
+                            bullets[1].fired = true;
+                            bullets[0].fired = false;
+                            yield return new WaitForSeconds(fireRate);
+                        }
+                    }
+                }
+                else
+                {
+                    if (!bullets[0].gameObject.activeSelf)
+                    {
+                        bullets[0].see();
+                        target.GetComponent<hp>().CurrentHP -= Damage;
+                        yield return new WaitForSeconds(0.1F);
+                        //StartCoroutine(bullets[0].Flash());
+                        //bullets[0].GetComponent<SpriteRenderer>().enabled = true;
+                    }
+                    else
+                    {
+                        bullets[0].hide();
+                        yield return new WaitForSeconds(fireRate);
+                    }
+                    
+                    //StartCoroutine(bullets[0].Flash());
+                }
+                //target.GetComponent<hp>().CurrentHP -= Damage;
+
+            }
+            yield return new WaitForSeconds(0.1F);
+        }
+       
     }
+
+
     void Update ()
 	{
 	    if (start)
