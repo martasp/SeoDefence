@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114151095080999424}
   - component: {fileID: 114309669981941498}
   - component: {fileID: 114994526205293240}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,6 +96,7 @@ MonoBehaviour:
   vec: {x: 0, y: 0}
   fired: 0
   selfDestruct: {fileID: 0}
+  isLeftProjectile: 1
 --- !u!114 &114309669981941498
 MonoBehaviour:
   m_ObjectHideFlags: 1
