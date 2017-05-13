@@ -52,7 +52,8 @@ public class Tower : MonoBehaviour {
         {
             if (projectiles.Count < numberOfWeapons)
             {
-                GameObject rocket = Instantiate(rocketType, spawnPosition.position + rocketType.transform.position, transform.rotation * rocketType.transform.rotation);
+                GameObject rocket = Instantiate(rocketType, spawnPosition.position, transform.rotation * rocketType.transform.rotation);
+                rocket.transform.Translate(rocketType.transform.position);
                 rocket.transform.parent = transform;
                 projectiles.Add(rocket.GetComponent<Projectile>());
                 yield return new WaitForSeconds(fireRate);
