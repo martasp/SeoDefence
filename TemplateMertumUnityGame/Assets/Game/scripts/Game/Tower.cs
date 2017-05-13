@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class Tower : MonoBehaviour {
 
-    public int Range { get; set; }
+    public int Range;
     public int Damage;
-    public GameObject BulletORbomb { get; set; }
     public int rotSpeed;
     public Vector2 vec;
     public bool IsRotating = false;
@@ -25,6 +24,9 @@ public class Tower : MonoBehaviour {
     public Transform spawnPosition;
     public bool start = false;
     public bool takeLeftProjectile = true;
+
+    public bool onTarget;
+
     public void Start()
     {
         if (start)
@@ -46,11 +48,20 @@ public class Tower : MonoBehaviour {
     private void rotateGunAsinc(Vector2 target)
     {
         //rotation
-        Vector2 difference = target - (Vector2)this.transform.position;
+        float currAngle = transform.rotation.eulerAngles.z;
+        Vector2 difference = target - (Vector2)transform.position;
         float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        var lerped = Mathf.LerpAngle(transform.rotation.eulerAngles.z, rotationZ, Time.deltaTime * rotSpeed);
-        this.transform.eulerAngles = new Vector3(0, 0, lerped);
+        var lerped = Mathf.LerpAngle(currAngle, rotationZ, Time.deltaTime * rotSpeed);
+
+        if (!isProjectileBased)
+        {
+            float targetAngle = Mathf.LerpAngle(currAngle, rotationZ, Mathf.Infinity);
+            onTarget = (Mathf.Abs(currAngle - targetAngle) <= 20F && Vector2.Distance(transform.position, target) <= Range);
+        }
+   
+        transform.eulerAngles = new Vector3(0, 0, lerped);
         IsRotating = true;
+        
     }
 
     IEnumerator SpawnFire()
@@ -99,7 +110,7 @@ public class Tower : MonoBehaviour {
         }
         while (!isProjectileBased)
         {
-            if (target != null)
+            if (target != null && onTarget)
             { 
                 if (bullets.Count == 2)
                 {
@@ -144,8 +155,6 @@ public class Tower : MonoBehaviour {
                         bullets[0].see();
                         target.GetComponent<hp>().CurrentHP -= Damage;
                         yield return new WaitForSeconds(0.1F);
-                        //StartCoroutine(bullets[0].Flash());
-                        //bullets[0].GetComponent<SpriteRenderer>().enabled = true;
                     }
                     else
                     {
@@ -153,9 +162,7 @@ public class Tower : MonoBehaviour {
                         yield return new WaitForSeconds(fireRate);
                     }
                     
-                    //StartCoroutine(bullets[0].Flash());
                 }
-                //target.GetComponent<hp>().CurrentHP -= Damage;
 
             }
             yield return new WaitForSeconds(0.1F);
@@ -172,7 +179,7 @@ public class Tower : MonoBehaviour {
 	        if (target != null)
 	            vec = target.transform.position;
 	        else vec = noTarget;
-	        rotateGunAsinc(vec);
-	    }
+            rotateGunAsinc(vec);
+        }
 	}
 }

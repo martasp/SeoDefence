@@ -15,7 +15,7 @@ public class MoneyScript : MonoBehaviour {
     private void InitMoney()
     {
         PlayerPrefs.SetInt("Money", money);
-        money = PlayerPrefs.GetInt("money");
+        money = PlayerPrefs.GetInt("money", money);
         SetMoneyInView();
     }
 

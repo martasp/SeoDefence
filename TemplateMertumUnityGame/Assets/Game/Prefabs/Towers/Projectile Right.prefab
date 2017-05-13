@@ -96,7 +96,7 @@ MonoBehaviour:
   vec: {x: 0, y: 0}
   fired: 0
   selfDestruct: {fileID: 0}
-  isLeftProjectile: 1
+  isLeftProjectile: 0
 --- !u!114 &114309669981941498
 MonoBehaviour:
   m_ObjectHideFlags: 1

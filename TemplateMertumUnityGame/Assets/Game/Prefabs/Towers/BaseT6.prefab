@@ -20,13 +20,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4934713502279170}
   - component: {fileID: 212506290958883210}
+  - component: {fileID: 114620870085002814}
   m_Layer: 0
-  m_Name: Projectile2
+  m_Name: Bullet2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1303125031277938
 GameObject:
   m_ObjectHideFlags: 0
@@ -72,13 +73,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4748110962593692}
   - component: {fileID: 212243902727014492}
+  - component: {fileID: 114111131448973738}
   m_Layer: 0
-  m_Name: Projectile1
+  m_Name: Bullet1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4506053707862310
 Transform:
   m_ObjectHideFlags: 1
@@ -101,7 +103,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1751349283175992}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 6.23, y: -1.59, z: 0}
+  m_LocalPosition: {x: 4.41, y: -6.59, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4506053707862310}
@@ -134,6 +136,21 @@ Transform:
   m_Father: {fileID: 4506053707862310}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114111131448973738
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1975479811103032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36370a22123eed41bb8ddaa6a653acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fired: 0
+  flashTime: 0.5
+  bullet: {fileID: 0}
+  e: {fileID: 0}
 --- !u!114 &114207251058709480
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -168,17 +185,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64e7b1b62a9476409dc2124fd5ebecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Range: 4
+  Damage: 15
   rotSpeed: 2
   vec: {x: 0, y: 0}
   IsRotating: 1
   isProjectileBased: 0
-  numberOfWeapons: 1
-  fireRate: 2
+  numberOfWeapons: 2
+  fireRate: 1
   target: {fileID: 0}
   targetSys: {fileID: 0}
   projectiles: []
+  bullets: []
   rocketType: {fileID: 0}
+  rocketTypeLeft: {fileID: 0}
+  rocketTypeRight: {fileID: 0}
   spawnPosition: {fileID: 0}
+  start: 0
+  takeLeftProjectile: 1
+  onTarget: 0
+--- !u!114 &114620870085002814
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1264784343535002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36370a22123eed41bb8ddaa6a653acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fired: 0
+  flashTime: 0.5
+  bullet: {fileID: 0}
+  e: {fileID: 0}
 --- !u!114 &114669349561342326
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -223,11 +263,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 60d8a683536ac8e4eb3afbb29b94dd46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212243902727014492
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -258,11 +303,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 819e925852efd1241afecd1e513ec7d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212506290958883210
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -293,11 +343,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300000, guid: 819e925852efd1241afecd1e513ec7d3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212792772566180268
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -328,8 +383,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 57bbfc0f07102c34c97c49658104bf38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

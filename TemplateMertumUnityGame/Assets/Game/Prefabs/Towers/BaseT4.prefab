@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1895294484200166}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -3.18, y: -1.77, z: 0}
+  m_LocalPosition: {x: 1, y: -6.62, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4933034947901440}
@@ -143,20 +143,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64e7b1b62a9476409dc2124fd5ebecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 10
+  Range: 4
+  Damage: 5
   rotSpeed: 2
   vec: {x: -3, y: 0}
   IsRotating: 1
   isProjectileBased: 0
   numberOfWeapons: 1
-  fireRate: 2
+  fireRate: 1
   target: {fileID: 0}
   targetSys: {fileID: 0}
   projectiles: []
   bullets: []
   rocketType: {fileID: 0}
+  rocketTypeLeft: {fileID: 0}
+  rocketTypeRight: {fileID: 0}
   spawnPosition: {fileID: 0}
   start: 0
+  takeLeftProjectile: 1
+  onTarget: 0
 --- !u!114 &114651289463342306
 MonoBehaviour:
   m_ObjectHideFlags: 1

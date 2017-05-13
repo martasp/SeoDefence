@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad65bc06584b51241b342b78f31ac599, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  splashDamage: 10
+  splashDamage: 15
   radius: 2
   targetsTag: enemy
   Explosion: {fileID: 1098212084203194, guid: 9bdfde6eed61d964db29a8026883b965, type: 2}
