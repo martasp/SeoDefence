@@ -34,8 +34,9 @@ public class Drag : MonoBehaviour
             if (!spot.GetComponent<Spot>().IsOn)
             {
                 worldPos.Set(worldPos.x, worldPos.y, 0);
-                var isThere = spot.GetComponent<SpriteRenderer>().bounds.Contains(worldPos);
-                Debug.Log(spot.GetComponent<SpriteRenderer>().bounds);
+               // spot.GetComponent<BoxCollider2D>().bounds.Expand(new Vector3(10,10,10));
+                var isThere = spot.GetComponent<BoxCollider2D>().bounds.Contains(worldPos);
+                Debug.Log(spot.GetComponent<BoxCollider2D>().bounds);
                 Debug.Log(worldPos);
                 Debug.Log(isThere);
                 if (isThere && tempreal!=null)
