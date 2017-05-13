@@ -59,8 +59,11 @@ public class Tower : MonoBehaviour {
             }
             else
             {
-                projectiles[0].fired = true;
-                projectiles.RemoveAt(0);
+                if (target != null)
+                {
+                    projectiles[0].fired = true;
+                    projectiles.RemoveAt(0);
+                }               
                 yield return new WaitForSeconds(fireRate);
             }
                 
