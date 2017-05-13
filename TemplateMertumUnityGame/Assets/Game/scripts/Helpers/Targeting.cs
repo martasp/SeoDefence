@@ -39,7 +39,6 @@ public class Targeting : MonoBehaviour {
 
     private void SortTargets()
     {
-        AddAllEnemies();
         targets.Sort(
             delegate(GameObject t1, GameObject t2)
             {
@@ -51,6 +50,7 @@ public class Targeting : MonoBehaviour {
 
     public GameObject GetTarget()
     {
+        AddAllEnemies();
         if (targets.Count != 0)
         {
             SortTargets();

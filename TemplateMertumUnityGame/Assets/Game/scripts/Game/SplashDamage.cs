@@ -19,22 +19,19 @@ namespace Assets.Game.scripts.Game
                 if (distanceToEnemy <= radius)
                 {
                     enemy.GetComponent<hp>().CurrentHP -= splashDamage;
-                   // Debug.Log("padaryta zala, liko gyvybiu: " + enemy.GetComponent<hp>().CurrentHP + ", atstumas: " + distanceToEnemy);
-                }
-
+                }             
             }
-        
+            var explosion = Instantiate(Explosion, this.transform.position, new Quaternion());
+            Destroy(explosion, 5);
+            Destroy(this.gameObject);
         }
 
         void OnCollisionEnter2D(Collision2D coll)
         {
-            Debug.Log("trigerina bomba enemy:");
             if (coll.gameObject.tag == targetsTag)
                 Debug.Log(coll.gameObject);
             this.gameObject.GetComponent<SplashDamage>().DealSplashDamage();
-            var exp = Instantiate(Explosion,this.transform.position,new Quaternion());
-            Destroy(exp,5);
-            Destroy(this.gameObject);
+            
         }
     }
 }

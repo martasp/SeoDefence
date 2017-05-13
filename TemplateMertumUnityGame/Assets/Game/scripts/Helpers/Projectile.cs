@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Assets.Game.scripts.Game;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,12 +10,14 @@ public class Projectile : MonoBehaviour {
     public Vector2 vec;
     public const int rotSpeed = 20;
     public bool fired = false;
+    public SplashDamage selfDestruct;
 
     private Vector2 noTarget = new Vector2(0, 0);
 
     // Use this for initialization
     void Start () {
         targetSys = GetComponent<Targeting>();
+        selfDestruct = GetComponent<SplashDamage>();
         vec = noTarget;
     }
 	
@@ -30,7 +33,7 @@ public class Projectile : MonoBehaviour {
                 rotateProjectile(vec);//++ pasuka tinkama linkme raketa
                 transform.position = Vector2.MoveTowards(transform.position, vec, missileVelocity * Time.deltaTime);
             }
-            else vec = noTarget;
+            else selfDestruct.DealSplashDamage();
         }
     }
     private void rotateProjectile(Vector2 target)
