@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class MoneyScript : MonoBehaviour {
-    public int money = 5;
+    public int money = 5000;
 
 	// Use this for initialization
 	void Start ()
@@ -14,6 +14,7 @@ public class MoneyScript : MonoBehaviour {
 
     private void InitMoney()
     {
+        PlayerPrefs.SetInt("Money", money);
         money = PlayerPrefs.GetInt("money");
         SetMoneyInView();
     }

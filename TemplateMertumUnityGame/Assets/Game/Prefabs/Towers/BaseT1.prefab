@@ -114,12 +114,22 @@ PolygonCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813681280453406}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.28, y: 1.28}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
   m_Points:
     m_Paths:
     - - {x: 0.35, y: 0.08}
@@ -145,6 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64e7b1b62a9476409dc2124fd5ebecf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: 0
   rotSpeed: 2
   vec: {x: -3, y: 0}
   IsRotating: 0
@@ -154,8 +165,13 @@ MonoBehaviour:
   target: {fileID: 0}
   targetSys: {fileID: 0}
   projectiles: []
+  bullets: []
   rocketType: {fileID: 1755767337505702, guid: 9eff5d417991a2f4293a9b7e370bb8e0, type: 2}
+  rocketTypeLeft: {fileID: 0}
+  rocketTypeRight: {fileID: 0}
   spawnPosition: {fileID: 0}
+  start: 0
+  takeLeftProjectile: 1
 --- !u!114 &114218542059465180
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -183,6 +199,8 @@ MonoBehaviour:
   target: {fileID: 0}
   vec: {x: 0, y: 0}
   fired: 0
+  selfDestruct: {fileID: 0}
+  isLeftProjectile: 1
 --- !u!114 &114682570993965826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -268,11 +286,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 60d8a683536ac8e4eb3afbb29b94dd46, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212839677409506782
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -303,11 +326,16 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: dc97e4fc42d47114c84ef4700f08ae53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
 --- !u!212 &212895769578369022
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -338,8 +366,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingLayer: 0
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 4f8d01e278a5bdd42b8f9896461f3a53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0

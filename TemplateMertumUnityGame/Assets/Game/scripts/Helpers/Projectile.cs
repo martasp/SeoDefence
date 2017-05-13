@@ -11,7 +11,7 @@ public class Projectile : MonoBehaviour {
     public const int rotSpeed = 20;
     public bool fired = false;
     public SplashDamage selfDestruct;
-
+    public bool isLeftProjectile = true;
     private Vector2 noTarget = new Vector2(0, 0);
 
     // Use this for initialization

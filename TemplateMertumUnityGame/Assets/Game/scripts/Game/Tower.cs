@@ -20,8 +20,11 @@ public class Tower : MonoBehaviour {
     public List<Projectile> projectiles;
     public List<Bullet> bullets;
     public GameObject rocketType;
+    public GameObject rocketTypeLeft;
+    public GameObject rocketTypeRight;
     public Transform spawnPosition;
     public bool start = false;
+    public bool takeLeftProjectile = true;
     public void Start()
     {
         if (start)
@@ -32,6 +35,10 @@ public class Tower : MonoBehaviour {
             GetComponentsInChildren(true, projectiles);
             GetComponentsInChildren(true, bullets);
             StartCoroutine(SpawnFire());
+            foreach (var rocket in projectiles)
+            {
+                rocket.GetComponent<PolygonCollider2D>().enabled = true;
+            }
         }
 
     }
@@ -52,18 +59,39 @@ public class Tower : MonoBehaviour {
         {
             if (projectiles.Count < numberOfWeapons)
             {
+                if (numberOfWeapons == 2)
+                {
+                    rocketType = takeLeftProjectile ? rocketTypeLeft : rocketTypeRight;
+                }
                 GameObject rocket = Instantiate(rocketType, spawnPosition.position, transform.rotation * rocketType.transform.rotation);
                 rocket.transform.Translate(rocketType.transform.position);
                 rocket.transform.parent = transform;
-                projectiles.Add(rocket.GetComponent<Projectile>());
+
+                Projectile projectile = rocket.GetComponent<Projectile>();
+                projectile.GetComponent<PolygonCollider2D>().enabled = true;
+                projectile.isLeftProjectile = takeLeftProjectile;
+
+                projectiles.Add(projectile);
+
+                if (numberOfWeapons == 2)
+                {
+                    takeLeftProjectile = !takeLeftProjectile;
+                }
                 yield return new WaitForSeconds(fireRate);
             }
             else
             {
                 if (target != null)
                 {
-                    projectiles[0].fired = true;
-                    projectiles.RemoveAt(0);
+                    foreach (var rocket in projectiles)
+                    {
+                        if (rocket.isLeftProjectile == takeLeftProjectile)
+                        {
+                            rocket.fired = true;
+                            projectiles.Remove(rocket);
+                            break;
+                        }
+                    }
                 }               
                 yield return new WaitForSeconds(fireRate);
             }
