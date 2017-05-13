@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114041657245960328}
   - component: {fileID: 114435610940978052}
   - component: {fileID: 114751056406717210}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile Right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -80,7 +80,7 @@ GameObject:
   - component: {fileID: 114533270561509862}
   - component: {fileID: 114756995043769664}
   - component: {fileID: 114991367280129152}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Projectile Left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1789387937994336}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 4.67, y: 3.95, z: 0}
+  m_LocalPosition: {x: 6.726861, y: 0.4315899, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4511543525225906}
