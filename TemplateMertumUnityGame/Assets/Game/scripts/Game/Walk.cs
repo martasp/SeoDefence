@@ -11,11 +11,12 @@ public class Walk : MonoBehaviour {
     private List<Vector2> path;
     private Vector2 there;
     private HealthBar MyHp;
+    public string enemyPath = "path";
     // Use this for initialization
     void Start ()
     {
         MyHp = GameObject.Find("Slider").GetComponent<HealthBar>();
-        path = GameObject.Find("path").GetComponent<Path>().Points;
+        path = GameObject.Find(enemyPath).GetComponent<Path>().Points;
         Time.timeScale = 1;
     }
 	
