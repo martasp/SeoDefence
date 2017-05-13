@@ -6,12 +6,19 @@ public class SpawnPoint : MonoBehaviour {
     public int enemiesCount=9;
     public float spawnInterval=1;
     public GameObject enemyType;
+    public int StartSpawningAfterSeconds = 0;
+
+
     //private Targeting targetSys;
 
     // Use this for initialization
     void Start () {
+        Invoke("StartSpawn", StartSpawningAfterSeconds);
+    }
+
+    public void StartSpawn()
+    {
         StartCoroutine(Spawn());
-        //targetSys = GetComponent<Targeting>();
     }
 
     IEnumerator Spawn()

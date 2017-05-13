@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4445490174062226}
   - component: {fileID: 114095896559096050}
+  - component: {fileID: 114766151884311072}
+  - component: {fileID: 114469880272287764}
   - component: {fileID: 212053292766269452}
   m_Layer: 0
   m_Name: Spawn Point
@@ -52,9 +54,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 250511326739a8441a15ff18bb894dd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemiesCount: 9
-  spawnInterval: 5
+  enemiesCount: 1000
+  spawnInterval: 0.3
   enemyType: {fileID: 1417891217307076, guid: 9ab06529e8952424ca3d862a9f7b349c, type: 2}
+  StartSpawningAfterSeconds: 3
+--- !u!114 &114469880272287764
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423297278167894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250511326739a8441a15ff18bb894dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesCount: 1000
+  spawnInterval: 1.5
+  enemyType: {fileID: 1855140093367550, guid: e46a89536a43afe448fd689fdfc581d8, type: 2}
+  StartSpawningAfterSeconds: 20
+--- !u!114 &114766151884311072
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423297278167894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250511326739a8441a15ff18bb894dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesCount: 1000
+  spawnInterval: 0.8
+  enemyType: {fileID: 1557233309753672, guid: b5f8b071c3d49d540930aedd9a239352, type: 2}
+  StartSpawningAfterSeconds: 10
 --- !u!212 &212053292766269452
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -85,8 +118,13 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
+  m_SortingLayer: 0
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: c5549609211e16d49aeef65ee49e9595, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
