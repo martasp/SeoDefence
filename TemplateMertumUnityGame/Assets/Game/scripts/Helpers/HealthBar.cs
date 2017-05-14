@@ -34,6 +34,7 @@ public class HealthBar : MonoBehaviour
     public void GameOver()
     {
         var manager = this.gameObject.AddComponent<UIManager>();
+        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().StoreHighscore(GameObject.Find("ScoresUI").GetComponent<ScoreManager>().getIntScore());
         manager.GameOverSceneAsync();
     }
 }

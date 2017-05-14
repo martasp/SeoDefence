@@ -35,6 +35,7 @@ public class hp : MonoBehaviour {
                     Destroy(this.gameObject.transform.GetChild(i).gameObject);
             }
             GameObject.Find("Money").GetComponent<MoneyScript>().Add(50); //gets money for one kills
+            GameObject.Find("ScoresUI").GetComponent<ScoreManager>().AddScore(25); //get score for one kill
             Destroy(this.gameObject);
         }
     }

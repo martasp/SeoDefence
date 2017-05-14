@@ -44,10 +44,13 @@ public class UIManager : MonoBehaviour {
     public void PlayGameScene()
     {
         SceneManager.LoadScene("PlayGameScene");
+        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().resetScore();
     }
     public void GameOverScene()
     {
         SceneManager.LoadScene("GameOverScene");
+        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().DisplayHscore();
+        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().Displayscore();
     }
     public void ShopScene()
     {

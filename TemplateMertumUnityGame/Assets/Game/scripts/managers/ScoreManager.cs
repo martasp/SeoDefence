@@ -29,6 +29,18 @@ public class ScoreManager : MonoBehaviour {
 	{
 		return PlayerPrefs.GetInt("score",0).ToString(); 
 	}
+    public int getIntScore()
+    {
+        return PlayerPrefs.GetInt("score", 0);
+    }
+    public void resetScore()
+    {
+        PlayerPrefs.SetInt("score", 0);
+    }
+    public void resetHighScore()
+    {
+        PlayerPrefs.SetInt("highscore", 0);
+    }
 	public void DisplayHscore()
 	{
 		highscoreText.text = HscoreGet ();
@@ -53,8 +65,8 @@ public class ScoreManager : MonoBehaviour {
 	}
 	void Update()
 	{
-	//	Displayscore ();
-	//DisplayHscore ();
+		//Displayscore ();
+	   // DisplayHscore ();
 	}
 
 
