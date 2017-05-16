@@ -96,13 +96,17 @@
     <Compile Include="Assets\Game\scripts\Helpers\Projectile.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\SpriteSwap.cs" />
     <Compile Include="Assets\Game\scripts\Helpers\Targeting.cs" />
+    <Compile Include="Assets\Game\scripts\Helpers\colorScript.cs" />
+    <Compile Include="Assets\Game\scripts\managers\AchievmentManager.cs" />
     <Compile Include="Assets\Game\scripts\managers\ScoreManager.cs" />
     <Compile Include="Assets\Game\scripts\managers\UIManager.cs" />
     <Compile Include="Assets\Game\scripts\services\FadeText.cs" />
     <Compile Include="Assets\Game\scripts\services\Fader.cs" />
+    <Compile Include="Assets\Game\scripts\services\closePanel.cs" />
     <Compile Include="Assets\Game\scripts\turrentRotation.cs" />
     <Compile Include="Assets\GetInfo.cs" />
     <Compile Include="Assets\Spot.cs" />
+    <Compile Include="Assets\onScreenAchievment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Game\fonts\1001fonts-decoborders-eula.txt" />

@@ -37,6 +37,9 @@ public class Walk : MonoBehaviour {
     public void die()
     {
         MyHp.Damage();
+        GameObject.Find("GameManager").GetComponent<AchievmentManager>().addAliveEnemies();
+        if (GameObject.Find("GameManager").GetComponent<AchievmentManager>().checkSurvivedEnemies())
+            GameObject.Find("privateRyan").GetComponent<onScreenAchievment>().showUp();
         Destroy(this.gameObject);
     }
     public void moveTo()

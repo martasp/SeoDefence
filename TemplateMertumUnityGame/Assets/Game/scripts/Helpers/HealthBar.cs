@@ -35,6 +35,10 @@ public class HealthBar : MonoBehaviour
     {
         var manager = this.gameObject.AddComponent<UIManager>();
         GameObject.Find("ScoresUI").GetComponent<ScoreManager>().StoreHighscore(GameObject.Find("ScoresUI").GetComponent<ScoreManager>().getIntScore());
+        GameObject.Find("GameManager").GetComponent<AchievmentManager>().checkKilledIOG();
+        GameObject.Find("GameManager").GetComponent<AchievmentManager>().addPlayTimes();
+        if (GameObject.Find("GameManager").GetComponent<AchievmentManager>().checkPlayTimes())
+            GameObject.Find("persistent").GetComponent<onScreenAchievment>().showUp();
         manager.GameOverSceneAsync();
     }
 }

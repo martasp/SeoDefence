@@ -27,12 +27,12 @@ public class UIManager : MonoBehaviour {
         Invoke("GameOverScene", 1);
         transition.TransparentToBlack();
     }
-    public void ShopSceneAsync()
+    public void AchievmentSceneAsync()
     {
         transition = GameObject.Find("imgFader").GetComponent<Fader>();
-        Debug.Log("opening ShopScene");
+        Debug.Log("opening AchievmentScene");
         transition.TransparentToBlack();
-        Invoke("ShopScene", transition.fadeTime);
+        Invoke("AchievmentScene", transition.fadeTime);
     }
     public void StartSceneAsync()
     {
@@ -44,7 +44,7 @@ public class UIManager : MonoBehaviour {
     public void PlayGameScene()
     {
         SceneManager.LoadScene("PlayGameScene");
-        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().resetScore();
+        GameObject.Find("ScoresUI").GetComponent<ScoreManager>().resetScore(); 
     }
     public void GameOverScene()
     {
@@ -52,9 +52,9 @@ public class UIManager : MonoBehaviour {
         GameObject.Find("ScoresUI").GetComponent<ScoreManager>().DisplayHscore();
         GameObject.Find("ScoresUI").GetComponent<ScoreManager>().Displayscore();
     }
-    public void ShopScene()
+    public void AchievmentScene()
     {
-        SceneManager.LoadScene("Shop");
+        SceneManager.LoadScene("AchievmentScene");
     }
     public void StartScene()
     {

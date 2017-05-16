@@ -12,6 +12,7 @@ namespace Assets.Game.scripts.Game
         public void DealSplashDamage()
         {
             GameObject[] enemies = GameObject.FindGameObjectsWithTag(targetsTag);
+            int killcount = 0;
 
             foreach (GameObject enemy in enemies)
             {
@@ -19,8 +20,12 @@ namespace Assets.Game.scripts.Game
                 if (distanceToEnemy <= radius)
                 {
                     enemy.GetComponent<hp>().CurrentHP -= splashDamage;
+                    if (enemy.GetComponent<hp>().CurrentHP <= 0) killcount++;
                 }             
             }
+            GameObject.Find("GameManager").GetComponent<AchievmentManager>().addSplashRAD(killcount);
+            if (GameObject.Find("GameManager").GetComponent<AchievmentManager>().checkSplashedEnemies())
+                GameObject.Find("nukeem").GetComponent<onScreenAchievment>().showUp();
             var explosion = Instantiate(Explosion, this.transform.position, new Quaternion());
             Destroy(explosion, 5);
             Destroy(this.gameObject);
