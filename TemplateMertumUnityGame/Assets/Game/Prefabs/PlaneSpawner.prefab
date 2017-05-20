@@ -54,9 +54,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000000
-  spawnInterval: 20
+  spawnInterval: 50
   enemyType: {fileID: 1020296861857992, guid: 2a087f6addfc4ce40af0ec652eba8572, type: 2}
-  StartSpawningAfterSeconds: 10
+  StartSpawningAfterSeconds: 50
 --- !u!114 &114817751730477786
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,9 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000
-  spawnInterval: 40
+  spawnInterval: 100
   enemyType: {fileID: 1209960945572552, guid: 0d4f27e2a7d0379478f9f263ae53e827, type: 2}
-  StartSpawningAfterSeconds: 20
+  StartSpawningAfterSeconds: 100
 --- !u!212 &212625431026498686
 SpriteRenderer:
   m_ObjectHideFlags: 1
