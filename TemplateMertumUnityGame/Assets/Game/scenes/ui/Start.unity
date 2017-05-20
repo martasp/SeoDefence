@@ -311,6 +311,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: AchievmentSceneAsync
       objectReference: {fileID: 0}
+    - target: {fileID: 82456259123326658, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ba816f4fb7545e746a9099781099c6d9, type: 3}
+    - target: {fileID: 224760155342132028, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -41.8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f23af461980af88488a0470855e479ef, type: 2}
   m_IsPrefabParent: 0
