@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
 		if(newHighscore > oldHighscore)
 		{
 			PlayerPrefs.SetInt("highscore", newHighscore);
-			highscoreText = scoreText;
+			highscoreText.text = scoreText.text;
 			PlayerPrefs.Save();
 		}
 	}
@@ -54,8 +54,9 @@ public class ScoreManager : MonoBehaviour {
     public void AddScore(int sc)
     {
         var temp = PlayerPrefs.GetInt("score") + sc;
-        PlayerPrefs.SetInt("score",temp);
+        StoreHighscore(temp);
         Displayscore();
+        DisplayHscore();
     }
 
 	void Start()
