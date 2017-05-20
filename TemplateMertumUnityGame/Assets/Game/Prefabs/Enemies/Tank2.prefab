@@ -175,6 +175,7 @@ MonoBehaviour:
   stopcount: 0
   speed: 1
   rotSpeed: 10
+  enemyPath: path
 --- !u!114 &114987583997603796
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -186,8 +187,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be06231d47281d44a9ee1bc0449dfdae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 100
-  CurrentHP: 20
+  maxHP: 640
+  CurrentHP: 640
+  moneyForKill: 72
 --- !u!212 &212427227036902384
 SpriteRenderer:
   m_ObjectHideFlags: 1

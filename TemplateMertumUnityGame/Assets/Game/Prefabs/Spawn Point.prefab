@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 114469880272287764}
   - component: {fileID: 212053292766269452}
   - component: {fileID: 114606463714802092}
+  - component: {fileID: 114308198791243810}
+  - component: {fileID: 114497083228560474}
   m_Layer: 0
   m_Name: Spawn Point
   m_TagString: Respawn
@@ -56,9 +58,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000000
-  spawnInterval: 0.3
+  spawnInterval: 0.8
   enemyType: {fileID: 1417891217307076, guid: 9ab06529e8952424ca3d862a9f7b349c, type: 2}
   StartSpawningAfterSeconds: 3
+--- !u!114 &114308198791243810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423297278167894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250511326739a8441a15ff18bb894dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesCount: 1000000
+  spawnInterval: 50
+  enemyType: {fileID: 1596551037830212, guid: 146767aa142e56c42a4b18d5bb62a91e, type: 2}
+  StartSpawningAfterSeconds: 50
 --- !u!114 &114469880272287764
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,9 +88,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000000
-  spawnInterval: 1.5
+  spawnInterval: 20
   enemyType: {fileID: 1855140093367550, guid: e46a89536a43afe448fd689fdfc581d8, type: 2}
-  StartSpawningAfterSeconds: 20
+  StartSpawningAfterSeconds: 30
+--- !u!114 &114497083228560474
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1423297278167894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 250511326739a8441a15ff18bb894dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemiesCount: 1000000
+  spawnInterval: 100
+  enemyType: {fileID: 1649212558951608, guid: c92e13ae0b197bd48b9ee449311542c8, type: 2}
+  StartSpawningAfterSeconds: 60
 --- !u!114 &114606463714802092
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -86,9 +118,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000000
-  spawnInterval: 3
+  spawnInterval: 30
   enemyType: {fileID: 1041803303874960, guid: 955fdf72bffc15548ab264519c1c84db, type: 2}
-  StartSpawningAfterSeconds: 50
+  StartSpawningAfterSeconds: 40
 --- !u!114 &114766151884311072
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,9 +133,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesCount: 1000000
-  spawnInterval: 0.8
+  spawnInterval: 10
   enemyType: {fileID: 1557233309753672, guid: b5f8b071c3d49d540930aedd9a239352, type: 2}
-  StartSpawningAfterSeconds: 10
+  StartSpawningAfterSeconds: 20
 --- !u!212 &212053292766269452
 SpriteRenderer:
   m_ObjectHideFlags: 1

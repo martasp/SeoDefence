@@ -221,8 +221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be06231d47281d44a9ee1bc0449dfdae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHP: 40
-  CurrentHP: 40
+  maxHP: 343
+  CurrentHP: 343
+  moneyForKill: 50
 --- !u!212 &212215892243613444
 SpriteRenderer:
   m_ObjectHideFlags: 1
