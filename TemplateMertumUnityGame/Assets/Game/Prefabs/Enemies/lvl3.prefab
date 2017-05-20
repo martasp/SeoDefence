@@ -126,7 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHP: 100
-  CurrentHP: 100
+  CurrentHP: 50
+  moneyForKill: 50
 --- !u!212 &212757379094031746
 SpriteRenderer:
   m_ObjectHideFlags: 1

@@ -246,12 +246,12 @@ Prefab:
     - target: {fileID: 224212772358237908, guid: f23af461980af88488a0470855e479ef,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 40.3
+      value: 145.1
       objectReference: {fileID: 0}
     - target: {fileID: 224212772358237908, guid: f23af461980af88488a0470855e479ef,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -30.4
+      value: 26.8
       objectReference: {fileID: 0}
     - target: {fileID: 1272542130896926, guid: f23af461980af88488a0470855e479ef, type: 2}
       propertyPath: m_IsActive
@@ -285,12 +285,12 @@ Prefab:
     - target: {fileID: 224182424072065488, guid: f23af461980af88488a0470855e479ef,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 50.92
+      value: 24.5
       objectReference: {fileID: 0}
     - target: {fileID: 224182424072065488, guid: f23af461980af88488a0470855e479ef,
         type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 54.5
+      value: 2.1
       objectReference: {fileID: 0}
     - target: {fileID: 224667789111912026, guid: f23af461980af88488a0470855e479ef,
         type: 2}
@@ -320,6 +320,20 @@ Prefab:
         type: 2}
       propertyPath: m_AnchoredPosition.x
       value: -41.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503253039535020, guid: f23af461980af88488a0470855e479ef, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114689947194152248, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1131063491}
+    - target: {fileID: 114689947194152248, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: openPage
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f23af461980af88488a0470855e479ef, type: 2}

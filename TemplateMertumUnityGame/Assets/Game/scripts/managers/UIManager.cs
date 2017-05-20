@@ -60,6 +60,10 @@ public class UIManager : MonoBehaviour {
     {
         SceneManager.LoadScene("Start");
     }
+    public void openPage ()
+    {
+        Application.OpenURL("https://www.facebook.com/mertumGStudios/?fref=ts");
+    }
     #endregion
     #region GameOver
 
