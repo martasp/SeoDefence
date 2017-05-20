@@ -908,6 +908,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &131509663
 GameObject:
@@ -1050,6 +1051,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &184150535
 GameObject:
@@ -1105,6 +1107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1001 &215858526
 Prefab:
@@ -2398,6 +2401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1001 &425473867
 Prefab:
@@ -2457,6 +2461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1001 &485088935
 Prefab:
@@ -4071,6 +4076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &904474612
 GameObject:
@@ -4669,6 +4675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &1051977649
 GameObject:
@@ -4755,6 +4762,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &1097321556
 GameObject:
@@ -5447,6 +5455,91 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1302531832}
+--- !u!1 &1302693680 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1689323477388850, guid: 56b24a0d2aa77e842915fd595a3f84dd,
+    type: 2}
+  m_PrefabInternal: {fileID: 248041085}
+--- !u!82 &1302693682
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1302693680}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5279587376cb13242880fa14e60d7f61, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 15
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1001 &1311877692
 Prefab:
   m_ObjectHideFlags: 0
@@ -5509,6 +5602,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &1393243223
 GameObject:
@@ -7921,6 +8015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90cffb58af9b41f4cb2c46d98c5e045c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  check: 0
   position: {x: 0, y: -3, z: 0}
 --- !u!1 &2089208941
 GameObject:
