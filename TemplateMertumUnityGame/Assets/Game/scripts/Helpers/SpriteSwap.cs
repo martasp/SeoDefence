@@ -15,7 +15,7 @@ public class SpriteSwap : MonoBehaviour {
 		old = img.sprite;
 		img.sprite = Sp;
 		Sp = old;
-        text.enabled = !text.enabled;
-        music.mute = !music.mute;
+        if (text) text.enabled = !text.enabled;
+        if (music) music.mute = !music.mute;
 	}
 }

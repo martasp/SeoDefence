@@ -335,6 +335,16 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: openPage
       objectReference: {fileID: 0}
+    - target: {fileID: 114209409114877234, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: music
+      value: 
+      objectReference: {fileID: 635680612}
+    - target: {fileID: 114038631575838326, guid: f23af461980af88488a0470855e479ef,
+        type: 2}
+      propertyPath: m_Text
+      value: Battlefield Defence
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f23af461980af88488a0470855e479ef, type: 2}
   m_IsPrefabParent: 0
@@ -344,6 +354,11 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 58552563}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!82 &635680612 stripped
+AudioSource:
+  m_PrefabParentObject: {fileID: 82456259123326658, guid: f23af461980af88488a0470855e479ef,
+    type: 2}
+  m_PrefabInternal: {fileID: 58552563}
 --- !u!1001 &668755726
 Prefab:
   m_ObjectHideFlags: 0
