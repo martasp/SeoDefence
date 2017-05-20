@@ -24,6 +24,7 @@ public class Tower : MonoBehaviour {
     public Transform spawnPosition;
     public bool start = false;
     public bool takeLeftProjectile = true;
+    public AudioSource sound;
 
     public bool onTarget;
 
@@ -32,6 +33,7 @@ public class Tower : MonoBehaviour {
         if (start)
         {
             spawnPosition = GetComponentInParent<Transform>();
+            sound = GetComponent<AudioSource>();
             spawnPosition.Rotate(transform.rotation.eulerAngles);
             targetSys = GetComponent<Targeting>();
             GetComponentsInChildren(true, projectiles);
@@ -99,6 +101,7 @@ public class Tower : MonoBehaviour {
                         if (rocket.isLeftProjectile == takeLeftProjectile)
                         {
                             rocket.fired = true;
+                            sound.Play();
                             projectiles.Remove(rocket);
                             break;
                         }
@@ -119,6 +122,7 @@ public class Tower : MonoBehaviour {
                         if (!bullets[0].gameObject.activeSelf)
                         {
                             bullets[0].see();
+                            sound.Play();
                             target.GetComponent<hp>().CurrentHP -= Damage;
                             yield return new WaitForSeconds(0.1F);
                         }
@@ -136,6 +140,7 @@ public class Tower : MonoBehaviour {
                         if (!bullets[1].gameObject.activeSelf)
                         {
                             bullets[1].see();
+                            sound.Play();
                             target.GetComponent<hp>().CurrentHP -= Damage;
                             yield return new WaitForSeconds(0.1F);
                         }
@@ -153,6 +158,7 @@ public class Tower : MonoBehaviour {
                     if (!bullets[0].gameObject.activeSelf)
                     {
                         bullets[0].see();
+                        sound.Play();
                         target.GetComponent<hp>().CurrentHP -= Damage;
                         yield return new WaitForSeconds(0.1F);
                     }

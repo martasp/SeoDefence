@@ -659,6 +659,7 @@ MonoBehaviour:
   spawnPosition: {fileID: 0}
   start: 0
   takeLeftProjectile: 1
+  sound: {fileID: 0}
   onTarget: 0
 --- !u!114 &72198597
 MonoBehaviour:
@@ -4644,6 +4645,10 @@ Prefab:
     - target: {fileID: 4127896210189848, guid: 9bdfde6eed61d964db29a8026883b965, type: 2}
       propertyPath: m_RootOrder
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1098212084203194, guid: 9bdfde6eed61d964db29a8026883b965, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bdfde6eed61d964db29a8026883b965, type: 2}
