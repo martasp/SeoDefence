@@ -26,6 +26,7 @@ public class Tower : MonoBehaviour {
     public bool takeLeftProjectile = true;
     public AudioSource sound;
 
+    public GameObject bload;
     public bool onTarget;
 
     public void Start()
@@ -124,6 +125,7 @@ public class Tower : MonoBehaviour {
                             bullets[0].see();
                             sound.Play();
                             target.GetComponent<hp>().CurrentHP -= Damage;
+                            Blood();
                             yield return new WaitForSeconds(0.1F);
                         }
                         else
@@ -142,6 +144,7 @@ public class Tower : MonoBehaviour {
                             bullets[1].see();
                             sound.Play();
                             target.GetComponent<hp>().CurrentHP -= Damage;
+                            Blood();
                             yield return new WaitForSeconds(0.1F);
                         }
                         else
@@ -160,6 +163,7 @@ public class Tower : MonoBehaviour {
                         bullets[0].see();
                         sound.Play();
                         target.GetComponent<hp>().CurrentHP -= Damage;
+                        Blood();
                         yield return new WaitForSeconds(0.1F);
                     }
                     else
@@ -183,6 +187,12 @@ public class Tower : MonoBehaviour {
             
         }
        
+    }
+
+    private void Blood()
+    {
+        var bload = Instantiate(this.bload, target.transform.position, new Quaternion());
+        Destroy(bload, 5);
     }
 
 

@@ -30,7 +30,6 @@ namespace Assets.Game.scripts.Game
             Destroy(explosion, 5);
             Destroy(this.gameObject);
         }
-
         void OnCollisionEnter2D(Collision2D coll)
         {
             if (coll.gameObject.tag == targetsTag)
