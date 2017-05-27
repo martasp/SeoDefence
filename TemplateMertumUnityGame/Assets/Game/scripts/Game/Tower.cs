@@ -171,7 +171,16 @@ public class Tower : MonoBehaviour {
                 }
 
             }
-            yield return new WaitForSeconds(0.1F);
+            else
+            {
+                bullets[0].hide();
+                if (bullets.Count == 2)
+                {
+                    bullets[1].hide();
+                }
+                yield return new WaitForSeconds(0.1F);
+            }
+            
         }
        
     }
