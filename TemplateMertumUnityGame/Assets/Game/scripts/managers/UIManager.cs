@@ -8,8 +8,8 @@ public class UIManager : MonoBehaviour {
     private Fader transition;
     void Start()
     {
-        Debug.Log("uzkrauti screen fader");
-        transition = GameObject.Find("imgFader").GetComponent<Fader>();
+       // Debug.Log("uzkrauti screen fader");
+        //transition = GameObject.Find("imgFader").GetComponent<Fader>();
     }
 
     #region UIManaging
@@ -31,8 +31,8 @@ public class UIManager : MonoBehaviour {
     {
         transition = GameObject.Find("imgFader").GetComponent<Fader>();
         Debug.Log("opening AchievmentScene");
+        Invoke("AchievmentScene", 1);
         transition.TransparentToBlack();
-        Invoke("AchievmentScene", transition.fadeTime);
     }
     public void StartSceneAsync()
     {

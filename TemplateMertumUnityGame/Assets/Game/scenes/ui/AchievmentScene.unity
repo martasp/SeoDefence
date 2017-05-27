@@ -375,8 +375,8 @@ RectTransform:
   - {fileID: 1629530714}
   - {fileID: 298374527}
   - {fileID: 17903839}
-  - {fileID: 1886415281}
   - {fileID: 1212258191}
+  - {fileID: 1886415281}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -959,7 +959,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1013334689}
-        m_MethodName: StartScene
+        m_MethodName: StartSceneAsync
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1161,6 +1161,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   img: {fileID: 1725634246}
   Sp: {fileID: 21300000, guid: 37d3de4271667c44ea901c9e5c4b0e39, type: 3}
+  text: {fileID: 0}
+  music: {fileID: 0}
 --- !u!114 &1725634245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1416,7 +1418,7 @@ RectTransform:
   m_LocalScale: {x: 1.0001473, y: 1.0001473, z: 1.0001473}
   m_Children: []
   m_Father: {fileID: 194670631}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1569,7 +1571,7 @@ Prefab:
     - target: {fileID: 224213372436075204, guid: b653bd7d616b08949970203976267f33,
         type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 224213372436075204, guid: b653bd7d616b08949970203976267f33,
         type: 2}

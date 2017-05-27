@@ -603,6 +603,11 @@ Prefab:
       propertyPath: scoreText
       value: 
       objectReference: {fileID: 1951087191}
+    - target: {fileID: 114856131376494126, guid: 7629ab2449d25f849b4ba88db6fdc5f1,
+        type: 2}
+      propertyPath: m_Text
+      value: Battlefield Defence
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7629ab2449d25f849b4ba88db6fdc5f1, type: 2}
   m_IsPrefabParent: 0
